@@ -1,0 +1,27 @@
+@font-face {
+    // on décide du nom à donner à la fonte
+    font-family: "PT Sans";
+    // on fournit le fichier qui contient la fonte
+    src: url("~/fonts/PTSans-Regular.ttf");
+}
+
+@font-face {
+    // on décide du nom à donner à la fonte
+    font-family: "PT Sans Bold";
+    // on fournit le fichier qui contient la fonte
+    src: url("~/fonts/PTSans-Bold.ttf");
+}
+
+@font-face {
+    // on décide du nom à donner à la fonte
+    font-family: "Roboto Slab";
+    // on fournit le fichier qui contient la fonte
+    src: url("~/fonts/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+    // on décide du nom à donner à la fonte
+    font-family: "Roboto Slab Bold";
+    // on fournit le fichier qui contient la fonte
+    src: url("~/fonts/RobotoSlab-Black.ttf");
+}

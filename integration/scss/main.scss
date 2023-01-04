@@ -1,0 +1,28 @@
+/*
+Arborescence :
+- layout => les fichiers qui "construisent" la page : header, footer, main ?
+- components => chaque fichier concerne un composant (un "bloc" du site), par ex. les boutons
+*/
+// attention au @ devant import en SCSS (et en CSS) !
+
+// on importe nos fichiers "abstraits" (nos fontes, nos variables, nos couleurs...)
+@import './abstract/fonts';
+@import './abstract/colors';
+@import './abstract/variables';
+@import './abstract/mixins';
+
+// on importe les fichiers qui organisent le rendu général de nos pages (layout)
+@import './layout/global';
+@import './layout/header';
+@import './layout/footer';
+
+// on importe les fichiers de composants
+@import './components/button';
+@import './components/top-bar';
+@import './components/company';
+@import './components/excerpt';
+@import './components/main_menu';
+@import './components/profile-card';
+@import './components/single-post';
+@import './components/skill';
+@import './components/technology';

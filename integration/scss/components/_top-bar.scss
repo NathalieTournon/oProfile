@@ -1,0 +1,31 @@
+.top-bar {
+    display: flex;
+    margin-bottom: $gutter-double;
+    // tous les enfants directs : "> *"
+   
+
+    // & sert à répéter le sélecteur de la règle parente (ici ".top-bar")
+    // "&__logo" équivaut => ".top-bar__logo"
+    // on se sert de flex-grow pour fixer une proportion à utiliser pour chaque élément et conserver un alignement "rigide"
+    &__logo {
+        flex: 2;
+        font-family: "PT Sans Bold";
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__actions {
+        flex: 1;
+        text-align: center;
+
+        a {
+            color: $main-text-color;
+            text-decoration: none;
+        }
+    }
+
+    &__burger-button {
+        flex: 2;
+        text-align: right;
+    }
+}

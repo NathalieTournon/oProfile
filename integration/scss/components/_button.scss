@@ -1,0 +1,23 @@
+.button {
+    border: 3px solid $button-main-color;
+    display: inline-block;
+    color: $button-main-color;
+    margin-bottom: $gutter-half;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: $gutter-half;
+
+    //on crée un pseudo élément à la fin de notre élément .button => on y insère la flèche de fontawesome
+    &::after {
+        // on définit le contenu (attention, on ne peut mettre que du texte, pas de HTML:
+        content: '\f30b';
+        font-family: $font-awesome;
+        font-weight: 900; // on doit définir une graisse à 900 pour que cette icône s'affiche
+        padding-left: $gutter;
+    }
+
+    &:hover {
+        background: $linear-gradient;
+        color: $main-text-color;
+    }
+}

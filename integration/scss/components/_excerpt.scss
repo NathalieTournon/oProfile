@@ -1,0 +1,66 @@
+.excerpt-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.excerpt {
+    background-position: center;
+    background-size: cover;
+    padding: $gutter-double $gutter;
+    position: relative;
+    text-shadow: 0px 0px 10px #000;
+    z-index: 10;
+
+    @include medium {
+      width: 50%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__title {
+        border-bottom: 2px solid $white;
+        color: $white;
+        font-family: $font-title-bold;
+        font-size: 1.3rem;
+        margin-bottom: $gutter-double;
+        padding-bottom: $gutter-half;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $white;
+        padding: 0;
+        line-height: 1.3;
+    }
+
+    &::after {
+        background-color: #000;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.7;
+        z-index: -1;
+        transition: opacity $duration-fast;
+      }
+    
+      // Je parcours mon tableau $color-bg-post
+      // Pour chaque itération je vais avoir besoin de l'index & de la valeur
+      // https://sass-guidelin.es/fr/#each
+      @each $index, $color in $excerpts-rotation-color-list {
+        
+        // 6n+1
+        &:nth-child(6n+#{$index})::after {
+          background-color: darken($color, 10%);
+        }
+      }
+    
+      &:hover::after {
+        background-color: #000;
+        opacity: 0.2;
+      }
+}

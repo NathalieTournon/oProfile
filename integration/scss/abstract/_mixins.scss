@@ -1,0 +1,37 @@
+/**
+ * MIXINS RWD
+ */
+
+
+/* Cette première mixin est un peu spéciale : on la prévoit pour les règles à faire exclusivement sur mobile, mais ces règles ne seront pas utilisée par les breakpoints supérieurs => c'est pour ça qu'on utilise max-width */
+@mixin small-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+// les mixins suivantes crééent des media queries qui se cumulent au fur et à mesure que la alrgeur de l'écran augmente
+
+@mixin medium {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin extra-large {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin huge {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}

@@ -1,0 +1,30 @@
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+    &__item {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: $gutter-double;
+
+        &__bar {
+            border: 1px solid $blue;
+            cursor: pointer;
+            height: $gutter;
+            margin: $gutter-half; 
+            transition: all 0.6s;
+            width: 15%;
+            
+            &.active {
+                background-color: $blue;
+            }
+        }
+    }
+}
