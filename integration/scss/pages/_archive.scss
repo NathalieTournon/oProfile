@@ -1,0 +1,10 @@
+.posts-navigation {
+    background-color: $white;
+    padding: $gutter;
+
+    a {
+        display: block;
+        margin: $gutter auto;
+        max-width: 80%;
+    }
+}

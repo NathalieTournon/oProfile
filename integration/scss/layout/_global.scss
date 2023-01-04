@@ -1,0 +1,63 @@
+body {
+    background-color: #cccccc;
+    color: $main-text-color;
+    font-family: $font-main;
+
+    // on définit explicitement que le body occupe l'espace disponible
+    width: 100%;
+    height: 100%;
+    // à la fin du dev de l'intégration, on interdira l'affichage d'une scrollbar horizontale si le contenu dépasse
+    // overflow-x: hidden;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    section {
+        background-color: $white;
+        margin-bottom: $gutter-double;
+    
+        h2.section-title {
+            background-color: $title-backround;
+            border-bottom: 3px $blue solid;
+            color: $grey-blue;
+            font-family: $font-title-bold;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            padding: $gutter 0;
+            margin: $gutter-double $gutter;
+            width: 60%;
+        }
+    
+        h3.section-title {
+            color: $grey-blue;
+            font-family: $font-title;
+            font-size: 1.2rem;
+            padding-left: $gutter;
+        }
+    }
+    
+    main {
+        p {
+            line-height: 1.3;
+            margin-bottom: $gutter;
+            padding: $gutter;
+            color: $black;
+        }
+    
+        a {
+            color: $blue;
+            text-decoration: none;
+            transition: all 0.2s;
+    
+            &:hover {
+                color: $dark-blue;
+            }
+    
+            &:visited {
+                color: $grey;
+            }
+        }
+    }
+    
+}

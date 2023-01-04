@@ -1,0 +1,37 @@
+@use "sass:math";
+
+$gutter: 1rem;
+// on définit une demi-gouttière en divisant par 2 la gouttière de base
+$gutter-half: math.div($gutter, 2);
+$gutter-double: $gutter * 2;
+
+
+// on définit des "emplacements" pour les couleurs
+$main-text-color: $white;
+$button-main-color: $blue;
+$body-background-color: $grey;
+$title-backround: $white;
+$title-color: $grey-blue;
+
+$excerpts-rotation-color-list: (
+    1: lighten($light-blue, 10%),
+    2: $violet,
+    3: $red,
+    4: $yellow,
+    5: $blue,
+    6: $green,
+);
+
+
+$linear-gradient: linear-gradient(90deg, rgba($blue, 0.7) 0%, rgba($violet,0.7) 100%);
+
+$font-title: "Roboto Slab";
+$font-title-bold: "Roboto Slab Bold";
+$font-main: "PT Sans";
+$font-main-bold: "PT Sans Bold";
+$font-awesome: "Font Awesome 5 Free";
+$font-awesome-solid: "Font Awesome 5 Free";
+$font-awesome-brands: "Font Awesome 5 Brands";
+
+$duration-fast: 0.3s;
+
