@@ -1,0 +1,10 @@
+// Contient tous les styles liés uniquement au header
+
+@use "./var.scss";
+
+header {
+    //background-color: black;
+    h1 {
+        color: white;
+    }
+}
