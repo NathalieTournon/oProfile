@@ -1,9 +1,0 @@
-// Point d'entrée de notre SASS
-// Contient toutes les propriétés communes à plusieurs composants
-
-// On require le contenu de cette feuille de style
-// dans base.scss
-@use "./reset.scss";
-
-@use "./header.scss";
-@use "./var.scss";
