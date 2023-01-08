@@ -22,36 +22,62 @@ let Carousel = class Carousel {
         this.buttons.forEach((button) => {
             if(button.dataset.action === "previous") {
                 // Slide précédente
-                button.addEventListener('click', this.previousSlide);
+                button.addEventListener('click', () => {
+                    this.previousSlide();
+                });
             } else {
                 // Slide suivante
-                button.addEventListener('click', this.nextSlide);
+                button.addEventListener('click', () => {
+                    this.nextSlide();
+                });
             }
         })
     }
 
     nextSlide() {
         console.log('Slide suivante');
-        // On doit récupérer la slide affichée et sélectionner la suivante
-        // On doit afficher la suivante et cacher toutes les autres
+
+        // On récupére la slide affichée
+        const currentSlide = document.querySelector('.carousel__slide--show');
+
+        // Je cache la slide en cours
+        currentSlide.classList.remove('carousel__slide--show');
+        currentSlide.classList.add('carousel__slide--hidden');
+
+        // On vérifie si la slide suivante existe
+        if(currentSlide.nextElementSibling) {
+            // Elle existe et je l'affiche
+            currentSlide.nextElementSibling.classList.remove('carousel__slide--hidden');
+            currentSlide.nextElementSibling.classList.add('carousel__slide--show');
+        } else {
         // S'il n'y a pas de slide suivante, on revient au début
+        this.slides[0].classList.remove('carousel__slide--hidden');
+        this.slides[0].classList.add('carousel__slide--show');
+        }
     }
 
     previousSlide() {
         console.log('Slide précédente');
-        // On doit récupérer la slide affichée et sélectionner la précédente
-        // On doit afficher la précédente et cacher toutes les autres
-        // S'il n'y a pas de slide précédente, on revient à la fin
+        // On doit récupérer la slide affichée
+        const currentSlide = document.querySelector('.carousel__slide--show');
+
+        // Je cache la slide en cours
+        currentSlide.classList.remove('carousel__slide--show');
+        currentSlide.classList.add('carousel__slide--hidden');
+
+        // On vérifie si la slide précédente existe
+        if(currentSlide.previousElementSlibling) {
+            // Elle existe et je l'affiche
+            currentSlide.previousElementSibling.classList.remove('carousel__slide--hidden');
+            currentSlide.previousElementSibling.classList.add('carousel__slide--show');
+        } else {
+            // S'il n'y a pas de slide précédente, on revient au début
+            // Calcul du dernier élément du tableau de slides
+            const lastKey = this.slides.length - 1;
+            this.slides[lastKey].classList.remove('carousel__slide--hidden');
+            this.slides[lastKey].classList.add('carousel__slide--show');
+        }
     }
-
-    
-    // Quand je clique qur le bouton suivant, ça affiche la slide suivante
-    // et ça cache les autres
-
-    // Quand je clique sur le bouton précédent, ça affiche la slide précédente
-    // et ça cache les autres
-
-   // Le carousel doit pouvoir boucler
 
 };
 
