@@ -1,8 +1,19 @@
 .top-bar {
     display: flex;
     margin-bottom: $gutter-double;
+
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: black;
+        width: 100%;
+        padding: 0.5em 0;
+    }
+
     // tous les enfants directs : "> *"
-   
+
 
     // & sert à répéter le sélecteur de la règle parente (ici ".top-bar")
     // "&__logo" équivaut => ".top-bar__logo"
